@@ -56,7 +56,7 @@ def main(args):
         for txt_annotation in txt_annotations:
             coordinate = txt_annotation.split(' ')
             xml_file.write('    <object>\n')
-            xml_file.write('        <name>' + args.class_nane + '</name>\n')
+            xml_file.write('        <name>' + args.class_name + '</name>\n')
             xml_file.write('        <pose>Unspecified</pose>\n')
             xml_file.write('        <truncated>0</truncated>\n')
             xml_file.write('        <difficult>0</difficult>\n')
@@ -86,7 +86,7 @@ def parse_args():
     parser.add_argument('--txt_dir', default = '/home/robin/datasets/Annotations')
     parser.add_argument('--xml_dir', default = '/home/robin/datasets/Annotations_xml')
     parser.add_argument('--dataset_name', default = 'VOC2007')
-    parser.add_argument('--class_nane', default = 'car')
+    parser.add_argument('--class_name', default = 'car')
     parser.add_argument('--start_index', default = 0)
     parser.add_argument('--enable_rename', default = false)
     return parser.parse_args()
